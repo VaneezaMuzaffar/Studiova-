@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navbar -->
+  <header>
+    <h1>Studiova.</h1>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <span class="close-btn" id="closeSidebar">&times;</span>
+    <h3>Menu</h3>
+    <ul>
+      <li><i class="fas fa-fan"></i> <a href="./Home.html">Home</a></li>
+      <li><i class="fas fa-fan"></i> <a href="#about">About</a></li>
+      <li><i class="fas fa-fan"></i> <a href="#projects">Projects</a></li>
+      <li><i class="fas fa-fan"></i> <a href="#blog">Blog</a></li>
+      <li><i class="fas fa-fan"></i> <a href="#services">Services</a></li>
+      <li><i class="fas fa-fan"></i> <a href="#contact">Contact</a></li>
+      <li><i class="fas fa-fan"></i> <a href="#docs">Docs</a></li>
+    </ul>
+
+    <div class="auth">
+      <button class="signin" id="openSignin">Sign In</button>
+      <button class="signup" id="openSignup">Sign Up</button>
+    </div>
+
+    <div class="contact">
+      <p>+1-212-456-7890</p>
+      <p>info@wrappixel.com</p>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal" id="authModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Sign In</h2>
+      <div class="oauth">
+        <button><i class="fab fa-google"></i> Google</button>
+        <button><i class="fab fa-github"></i> GitHub</button>
+      </div>
+      <p style="text-align:center;">OR</p>
+      <input type="text" placeholder="Name (for Sign Up only)" id="nameField" style="display:none;">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button id="authBtn">Continue</button>
+      <p style="font-size:12px;margin-top:10px;">
+        By creating an account, you agree with our <a href="#">Privacy</a> and <a href="#">Policy</a>.
+      </p>
+    </div>
+  </div>
+
+   <div class="hero" id="home">
+  <!-- Background YouTube video -->
+  <div class="video-background">
+    <iframe src="https://www.youtube.com/embed/60h6lpnSgck?autoplay=1&mute=1&loop=1&playlist=60h6lpnSgck&controls=0&showinfo=0&modestbranding=1"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Overlay (optional for better text visibility) -->
+  <div class="overlay"></div>
+
+  <!-- Fan -->
+  <div class="fan"><i class="fas fa-fan"></i></div>
+
+  <!-- Content -->
+  <div class="content">
+    <p>We create <span style="color:#bfff4f">high-performing</span> 
+    digital <br> designs that elevate brands and <br> enhance conversions.</p>
+    <h1>Studiova</h1>
+    <button class="arrow-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </button>
+  </div>
+</div>
+ <!-- stats section under the hero section -->
+  
+  <section class="stats-section">
+    <!-- Background Shape -->
+    <svg class="bg-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="black" stroke-width="1">
+      <polygon points="100,10 190,60 160,160 40,160 10,60" />
+    </svg>
+
+    <!-- Left Info -->
+    <div class="left-info">
+      <div class="circle-num">01</div>
+      <div class="line"></div>
+      <div class="label">Stats & facts</div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="right-content">
+      <h1 class="stats-heading">High quality web design solutions you can trust.</h1>
+      <p class="stats-subtext">
+        When selecting a web design agency, it's essential to consider its reputation, experience, 
+        and the specific needs of your project.
+      </p>
+
+      <div class="stats-container">
+        <div class="stat-box">
+          <h2>40K+</h2>
+          <p>People who have launched their websites</p>
+        </div>
+        <div class="stat-box">
+          <h2>238+</h2>
+          <p>Experienced professionals ready to assist</p>
+        </div>
+        <div class="stat-box">
+          <h2>3M+</h2>
+          <p>Support through messages and live consultations</p>
+        </div>
+      </div>
+
+      <a href="about.html" class="btn">
+        Who we are <span>➜</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Sticky Arrow Button -->
+  <div class="scroll-arrow" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    ↑
+  </div>
+
+  <!-- featured projects -->
+    <section class="section">
+    <!-- Header -->
+    <div class="section-header">
+      <div class="number">02</div>
+      <div class="line"></div>
+      <div class="label">Portfolio</div>
+    </div>
+
+    <!-- Title -->
+    <div class="section-title">
+      <h2>Featured projects</h2>
+      <p>A glimpse into our creativity—exploring innovative designs, successful collaborations, and transformative digital experiences.</p>
+    </div>
+
+    <!-- Cards -->
+    <div class="card-row" id="cardRow">
+      <div class="card">
+        <img src="https://picsum.photos/400/300?random=1" alt="Project 1">
+        <div class="card-content">
+          <h3>Amber Bottle</h3>
+          <div class="tags">
+            <div class="tag">Web development</div>
+            <div class="tag">Digital design</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/400/300?random=2" alt="Project 2">
+        <div class="card-content">
+          <h3>Pixelforge</h3>
+          <div class="tags">
+            <div class="tag">UI/UX design</div>
+            <div class="tag">Web development</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/400/300?random=3" alt="Project 3">
+        <div class="card-content">
+          <h3>BioTrack LIMS</h3>
+          <div class="tags">
+            <div class="tag">Brand identity</div>
+            <div class="tag">Digital design</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/400/300?random=4" alt="Project 4">
+        <div class="card-content">
+          <h3>Amber Bot</h3>
+          <div class="tags">
+            <div class="tag">Photography</div>
+            <div class="tag">Studio</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/400/300?random=5" alt="Project 5">
+        <div class="card-content">
+          <h3>Creative UI</h3>
+          <div class="tags">
+            <div class="tag">UI/UX</div>
+            <div class="tag">Animation</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/400/300?random=6" alt="Project 6">
+        <div class="card-content">
+          <h3>Nature Design</h3>
+          <div class="tags">
+            <div class="tag">Photography</div>
+            <div class="tag">Branding</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Services Section -->
+<section class="services">
+  <div class="services-container">
+    
+    <!-- Left Side -->
+    <div class="services-left">
+      <!-- Label -->
+      <div class="section-label">
+        <span>03</span>
+        <div class="line"></div>
+        <div class="tag">Services</div>
+      </div>
+      <img src="./assets/services-img-1 (1).jpg" alt="Services Image">
+    </div>
+
+    <!-- Right Side -->
+    <div class="services-right">
+      <h2>What we do</h2>
+      <p>
+        A glimpse into our creativity—exploring innovative designs, 
+        successful collaborations, and transformative digital experiences.
+      </p>
+
+      <!-- Service Items -->
+      <div class="service-items">
+        <div class="service-item">
+          <h3><span>Brand identity</span></h3>
+          <p>When selecting a web design agency, it's essential to consider its reputation, experience, and the specific needs of your project.</p>
+        </div>
+
+        <div class="service-item">
+          <h3>Web development</h3>
+          <p>When selecting a web design agency, it's essential to consider its reputation, experience, and the specific needs of your project.</p>
+        </div>
+
+    
+    </div>
+  </div>
+</section>
+
+<!-- why choose us & stories from client section -->
+  <!-- SERVICES SECTION -->
+  <section>
+    <div class="section-header">
+      <div class="number">04</div>
+      <div class="line"></div>
+      <div class="label">Services</div>
+    </div>
+
+    <div class="services-top">
+      <div>
+        <h2>Why Choose Us</h2>
+        <p>We blend creativity with strategy to craft unique digital experiences that make an impact. With innovation and detail, we build results-driven solutions.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>500+ Projects</h3>
+        <p>Trusted by leading global brands.</p>
+      </div>
+      <div class="service-card">
+        <h3>98.6% Satisfaction</h3>
+        <p>Our clients love the results we deliver.</p>
+      </div>
+      <div class="service-card">
+        <h3>238+ Brands</h3>
+        <p>Delivering impactful designs worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section>
+    <div class="section-header">
+      <div class="number">05</div>
+      <div class="line"></div>
+      <div class="label">Portfolio</div>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card"><img src="https://picsum.photos/400/300?random=1" alt=""></div>
+      <div class="portfolio-card"><img src="https://picsum.photos/400/300?random=2" alt=""></div>
+      <div class="portfolio-card"><img src="https://picsum.photos/400/300?random=3" alt=""></div>
+      <div class="portfolio-card"><img src="https://picsum.photos/400/300?random=4" alt=""></div>
+      <div class="portfolio-card"><img src="https://picsum.photos/400/300?random=5" alt=""></div>
+      <div class="portfolio-card"><img src="https://picsum.photos/400/300?random=6" alt=""></div>
+    </div>
+  </section>
+
+<!-- contact section -->
+ <section class="contact-section">
+  <!-- Left side -->
+  <div class="contact-left">
+    <div class="contact-header">
+      <div class="circle">06</div>
+      <div class="line"></div>
+      <span class="contact-btn">Contact us</span>
+    </div>
+    <p>Let’s collaborate and create something amazing! Tell me about your project—I’m all ears.</p>
+  </div>
+
+  <!-- Right side -->
+  <div class="contact-right">
+    <h2>Get in touch</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" placeholder="Tell us about your project" rows="4" required></textarea>
+      <button type="submit" class="submit-btn">
+        Submit message <i class="fas fa-arrow-up-right-from-square"></i>
+      </button>
+    </form>
+  </div>
+</section>
+ <!-- footer section -->
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left side -->
+    <div class="footer-left">
+      <h2>Build something<br>together?</h2>
+      <p><i class="fas fa-arrow-up-right-from-square"></i> info@wrappixel.com</p>
+      <p><i class="fas fa-location-dot"></i> info@wrappixel.com</p>
+    </div>
+
+    <!-- Middle links -->
+    <div class="footer-middle">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Error 404</a></li>
+      </ul>
+    </div>
+
+    <!-- Right links -->
+    <div class="footer-right">
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom row -->
+  <div class="footer-bottom">
+    <p>© Studiova copyright 2025</p>
+    <p>Distributed by <a href="#">ThemeWagon</a></p>
+  </div>
+</footer>
+  <script src="index.js"></script>
+</body>
+</html>
